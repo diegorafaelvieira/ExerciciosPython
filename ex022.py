@@ -4,7 +4,7 @@
 #-Quantas letras aotodo[sem considerar espaços]
 #-Quantas letras tem o primeiro nome
 
-nome = str(input("Digite o seu nome completo: ")).strip()
+nome = str(input("Digite o seu nome completo: ")).strip()#remove espaços na contagem
 print(f'O seu nome é {nome}')
 print(f'O seu nome em maiúsculo é {nome.upper()}')
 print(f'O seu nome em minúsculo é {nome.lower()}')

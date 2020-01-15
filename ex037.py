@@ -10,9 +10,8 @@ print('2 - para Octal')
 print('3 - para Hexadecimal')
 op = int(input('Digite a opção desejada: '))
 if op == 1:
-    
-
+    print(f'O valor {val} em Decimal é equivalente a {bin(int(val))} em Binário')
 elif op == 2:
-
-
+    print(f'O valor {val} em Decimal é equivalente a {oct(int(val))} em Octal')
 elif op == 3:
+    print(f'O valor {val} em decimal é equivalente a {hex(int(val))} em Hexadecimal')

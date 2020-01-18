@@ -7,17 +7,19 @@
 
 from datetime import date
 
-anoAtual = date.today()
+anoAtual = date.today().year
 anoNasc = int(input('Digite o ano que nasceu: '))
-idade = anoAtual.year - anoNasc
-
+idade = anoAtual - anoNasc
+print(f'Quem nasceu em {anoNasc} tem {idade} anos')
 if idade < 18:
     tempo = 18 - idade
-    print('Ainda vai se alistar ao serviço militar.')
     print(f'Falta {tempo} ano(s) para se alistar.')
+    ano = anoAtual + tempo
+    print(f'O ano do alistamento será {ano}')
 elif idade == 18:
-    print('É hora de se alistar.')
+    print('Deve se alistar imediatamente.')
 else:
     tempo = idade - 18
-    print('Já passou o tempo de alistamento')
     print(f'Se passou {tempo} ano(s) para o alistamento.')
+    ano = anoAtual - tempo
+    print(f'Você deveria se alistar em {ano}')

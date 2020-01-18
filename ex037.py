@@ -4,14 +4,16 @@
 #-2 para octal
 #-3 para hexadecimal
 
-val = float(input('Digite o valor Decimal: '))
+val = int(input('Digite o valor Decimal: '))
 print('1 - para Binário')
 print('2 - para Octal')
 print('3 - para Hexadecimal')
-op = int(input('Digite a opção desejada: '))
+op = int(input('Digite a base desejada: '))
 if op == 1:
-    print(f'O valor {val} em Decimal é equivalente a {bin(int(val))} em Binário')
+    print(f'O valor {val} em Decimal é equivalente a {bin(val)[2:]} em Binário')
 elif op == 2:
-    print(f'O valor {val} em Decimal é equivalente a {oct(int(val))} em Octal')
+    print(f'O valor {val} em Decimal é equivalente a {oct(val)[2:]} em Octal')
 elif op == 3:
-    print(f'O valor {val} em decimal é equivalente a {hex(int(val))} em Hexadecimal')
+    print(f'O valor {val} em decimal é equivalente a {hex(val)[2:]} em Hexadecimal')
+else:
+    print('Opção inválida!')

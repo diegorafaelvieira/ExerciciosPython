@@ -6,21 +6,25 @@
 #- 3x ou mais no cartão: 20% de juros
 
 val = float(input('Digite o valor do produto R$'))
-print('Informe a condição de pagamento')
-print('1 - À vista em dinheiro/cheque')
-print('2 - À vista no cartão')
-print('3 - Em até 2x no cartão')
-print('4 - 3x ou mais no cartão')
+print('''Informe a condição de pagamento
+1 - À vista em dinheiro/cheque
+2 - À vista no cartão
+3 - Em até 2x no cartão
+4 - 3x ou mais no cartão''')
 cond = int(input('Condição: '))
 if cond == 1:
     total = val - ((val/100) * 10)
-    print(f'O valor do produto é de R${total:.2f}')
+    print(f'O valor do produto é de R${total:.2f} no dinheiro/cheque')
 elif cond == 2:
     total = val - ((val/100) * 5)
-    print(f'O valor do produto é de R${total:.2f}')
+    print(f'O valor do produto é de R${total:.2f} à vista no cartão')
 elif cond == 3:
     total = val
-    print(f'O valor do produto é de R${total:.2f}')
+    print(f'O valor do produto é de R${total:.2f} em até 2x no cartão')
 elif cond == 4:
-    total = val + ((val/100)*20)
-    print(f'O valor do produto é de R${total:.2f}')
+    parc = int(input('Quantidade de parcelas: '))
+    total = val + ((val/100) * 20)
+    val = total / parc
+    print(f'O valor do produto é de R${total:.2f} em {parc} parcelas de R${val:.2f}')
+else:
+    print('Opção inválida!')

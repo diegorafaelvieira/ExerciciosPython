@@ -9,11 +9,12 @@ l1 = float(input('Informe o lado 1: '))
 l2 = float(input('Informe o lado 2: '))
 l3 = float(input('Informe o lado 3: '))
 if l1 < l2+l3 and l2 < l1+l3 and l3 < l1+l2:
-    if l1 == l2 and l1 == l3 and l2 == l3:
-        print('Triangulo EQUILÁTERO')
-    elif l1 != l2 and l1 != l3 and l2 != l3:
-        print('Triângulo ESCALENO')
+    print('Triângulo ', end='') # AQUI COLOCA O TIPO DO TRIÂNGULO PRINT AO LADO
+    if l1 == l2 and l2 == l3:
+        print('EQUILÁTERO')
+    elif l1 != l2 and l2 != l3:
+        print('ESCALENO')
     else:
-        print('Triângulo ISÓSCELES')
+        print('ISÓSCELES')
 else:
     print('Não é triângulo')

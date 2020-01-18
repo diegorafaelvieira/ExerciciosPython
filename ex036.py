@@ -6,14 +6,15 @@
 
 casa = float(input('Digite o valor da casa: R$'))
 sal = float(input('Digite o salário: R$'))
-anos = int(input('Digite a quantidade de anos que deseja pagar: '))
+anos = int(input('Digite os anos do financiamento: '))
 
 meses = anos * 12
 valOk = (sal/100) * 30
-parcelaMes = casa/meses
+parcela = casa/meses
 
+print(f'Para pagar uma casa de R${casa:.2f} em {anos} anos a prestação será de R${parcela:.2f}')
 
-if parcelaMes <= valOk:
-    print(f'O valor da parcela mensal é de R${parcelaMes:.2f}')
+if parcela <= valOk:
+    print(f'Empréstimo autorizado!')
 else:
     print('Empréstimo negado!')

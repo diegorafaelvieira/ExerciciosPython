@@ -28,7 +28,7 @@ elif cpu == 1: #PAPEL
     elif eu == 1:
         print('Empate!')
     elif eu == 2:
-        print('Jogador venceu')
+        print('Jogador venceu!')
 elif cpu == 2: #TESOURA
     if eu == 0:
         print('Jogador venceu!')

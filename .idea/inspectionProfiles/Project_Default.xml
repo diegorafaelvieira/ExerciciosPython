@@ -12,6 +12,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="ex044.cartão" />
+          <option value="ex056.nomeH" />
         </list>
       </option>
     </inspection_tool>

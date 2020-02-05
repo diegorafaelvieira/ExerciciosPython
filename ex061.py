@@ -7,9 +7,8 @@ r = int(input('Informe a razão: '))
 c = 1
 val = a1
 
-print(a1,end='->')
 while c < 10:
+    print(val, end=' -> ')
     val += r
     c += 1
-    print(val, end='->')
-
+print('FIM')

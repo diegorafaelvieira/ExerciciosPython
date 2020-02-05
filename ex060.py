@@ -6,19 +6,24 @@
 
 #WHILE
 v = int(input('Digite o valor a ser fatorado: '))
-fat = v
-c = fat
-while c != 1:
-    c -= 1
+c = v
+fat = 1
+print(f'O fatorial de {v}! =', end=' ')
+while c > 0:
+    print(f'{c}', end=' ')
+    print('X ' if c > 1 else '= ', end='')
     fat *= c
-print(f'O fatoriral de {v} é {fat}.')
+    c -= 1
+print(f'{fat}.')
 
 
 #FOR
-v = int(input('Digite o valro a ser fatorado: '))
-fat = v
-for c in range(v,1,-1):
-    c -= 1
-    fat *= c
-print(f'O fatorial de {v} é igual a {fat}.')
+v = int(input('Digite o valor a ser fatorado: '))
+f = 1
+print(f'O fatorial de {v}! =', end=' ')
+for c in range(v,0,-1):
+    print(f'{c}', end=' ')
+    print('X ' if c > 1 else '= ', end='')
+    f *= c
+print(f'{f}.')
 
